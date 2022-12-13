@@ -60,7 +60,10 @@ Observe que existe o atributo **Sexo** em FUNCIONARIO e em DEPENDENTE, ent√£o h√
 
 |SQL|
 |-|
-|???|
+|SELECT nome_dependente, pnome, unome
+From dependente
+	join funcionario on fcpf = cpf
+    left outer join departamento on cpf_gerente = cpf|
 
 ### Valor NULO
 
