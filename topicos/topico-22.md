@@ -54,7 +54,7 @@ Um classificação comum para subconsultas é:
 - **Subconsulta Independente**: a execução da subconsulta é independente da consulta mais externa:
   - a subconsulta é executada uma única vez;
   - o resultado da subconsulta é utilizado para o processamento da consulta mais externa.
-- **Subconsulta Corretata**: a execução da subconsulta é dependente da consulta mais externa:
+- **Subconsulta Correlata**: a execução da subconsulta é dependente da consulta mais externa:
   - a subconsulta é potencialmente executada várias vezes:
     - a subconsulta é avaliada uma vez para cada _tupla_ (ou combinação de _tuplas_) na consulta externa.
   - a subconsulta requer dados oriundos da consulta externa para ser processada.
