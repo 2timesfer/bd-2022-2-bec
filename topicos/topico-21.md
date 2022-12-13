@@ -93,6 +93,8 @@ Experimente as seguintes alternativas para o comando acima:<br>
 
 1. Seja o comando SQL:<br>&nbsp;&nbsp;SELECT Salario<br>&nbsp;&nbsp;FROM FUNCIONARIO<br>&nbsp;&nbsp;WHERE Salario >= 13000 + ( SELECT MIN(Salario) FROM FUNCIONARIO )<br>Considere que na relação FUNCIONARIO:<br>■ há 4 (quatro) _tuplas_;<br>■ os salários 10000, 20000, 30000, 25000.<br>Qual a soma dos salários que são retornados pela consulta?
 
+<br>A soma dos salários retornados pela busca é 55000, dados essas condições<br>
+
 1. Seja o comando SQL:<br>
 SELECT Salario FROM FUNCIONARIO WHERE Salario > <br>
 &nbsp;&nbsp;( SELECT MIN(Salario) FROM FUNCIONARIO WHERE Salario < <br>
