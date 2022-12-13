@@ -60,7 +60,7 @@ Observe que existe o atributo **Sexo** em FUNCIONARIO e em DEPENDENTE, ent√£o h√
 
 |SQL|
 |-|
-|SELECT nome_dependente, pnome, unome<brFROM dependente<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN funcionario ON fcpf = cpf<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEFT OUTER JOIN departamento ON cpf_gerente = cpf<br>|
+|SELECT nome_dependente, pnome, unome<br>FROM dependente<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN funcionario ON fcpf = cpf<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEFT OUTER JOIN departamento ON cpf_gerente = cpf<br>|
 
 ### Valor NULO
 
