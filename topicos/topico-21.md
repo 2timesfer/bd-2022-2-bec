@@ -46,7 +46,7 @@ Funções agregadas e agrupamento de dados estão presentes na SQL de forma simi
 
 |Álgebra Relacional|SQL|
 |-|-|
-|ℑ CONTA Cpf_supervisor (π <sub>Cpf_supervisor</sub>FUNCIONARIO)|SELECT Count(Cpf_supervisor)<br>FROM ( <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT DISTINCT Cpf_supervisor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM FUNCIONARIO ) AS S<br><br>SELECT COUNT(DISTINCT Cpf_supervisor)<br>FROM FUNCIONARIO<br><br>**_# O comando abaixo está correto?_**<br>SELECT Count(\*)<br>FROM ( <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT DISTINCT Cpf_supervisor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM FUNCIONARIO ) AS S|
+|ℑ CONTA Cpf_supervisor (π <sub>Cpf_supervisor</sub>FUNCIONARIO)|SELECT Count(Cpf_supervisor)<br>FROM ( <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT DISTINCT Cpf_supervisor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM FUNCIONARIO ) AS S<br><br>SELECT COUNT(DISTINCT Cpf_supervisor)<br>FROM FUNCIONARIO<br><br>**_# O comando abaixo está correto?_**<br>Não está, ele conta o valor NULL também<br><br>SELECT Count(\*)<br>FROM ( <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT DISTINCT Cpf_supervisor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM FUNCIONARIO ) AS S|
 
 ### Exemplo 04: Funções agregadas e Agrupamento de dados
 #### Qual a quantidade de funcionários e média salarial por departamento da empresa?
