@@ -95,10 +95,13 @@ Experimente as seguintes alternativas para o comando acima:<br>
 
 <br>A soma dos salários retornados pela busca é 55000, dados essas condições<br>
 
-1. Seja o comando SQL:<br>
+2. Seja o comando SQL:<br>
 SELECT Salario FROM FUNCIONARIO WHERE Salario > <br>
 &nbsp;&nbsp;( SELECT MIN(Salario) FROM FUNCIONARIO WHERE Salario < <br>
 &nbsp;&nbsp;&nbsp;&nbsp;( SELECT MAX(Salario) FROM FUNCIONARIO WHERE Salario < <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( SELECT MAX(Salario) FROM FUNCIONARIO ) ) ) <br>
 
 Se a relação FUNCIONARIO possui 6 (seis) valores distintos de salário, então '_Salário 1_' é o menor salário e '_Salário 6_' é o maior salário. Some as sentenças verdadeiras:<br>(01) **Salário 1** está no resultado da consulta.<br>(02) **Salário 2** está no resultado da consulta.<br>(04) **Salário 3** está no resultado da consulta.<br>(08) **Salário 4** está no resultado da consulta.<br>(16) **Salário 5** está no resultado da consulta.<br>(32) **Salário 6** está no resultado da consulta.
+
+
+<br>A consulta retira os dois maiores valores e o menor valor de salário pago. Dito isso, resta o salário 2, 3 e 4. A soma pedida pelo enunciado é 14 (2+4+8)<br>
