@@ -141,6 +141,7 @@ A quantidade de _tuplas_ retornadas pelas execuções dos comandos (C1), (C2) e 
 &nbsp;&nbsp;(c) um, dois, dois.<br>
 &nbsp;&nbsp;(d) zero, dois e dois.<br>
 &nbsp;&nbsp;(e) dois, dois e um.<br>
+&nbsp;&nbsp;<b>(f) zero, dois e um.<br><b>
 
 2. A partir da [*ilustração para o BD Empresa*](../media/fig-mr-2.jpg), escreva a seguinte consulta em SQL (use JUNÇÃO EXTERNA):<br>
 _Para cada funcionário, liste o primeiro nome e o último nome e, se o funcionário tiver dependentes, liste também o nome dos seus dependentes_.
