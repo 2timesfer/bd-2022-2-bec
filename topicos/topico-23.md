@@ -76,6 +76,14 @@ A Cláusula EXISTS é usualmente aplicada em subconsultas correlatas.
 |-|-|
 |Subconsulta correlata|SELECT Pnome, Unome<br>FROM FUNCIONARIO<br>WHERE NOT EXISTS (<br>&nbsp;&nbsp;&nbsp;&nbsp;**SELECT \***<br>&nbsp;&nbsp;&nbsp;&nbsp;**FROM DEPENDENTE**<br>&nbsp;&nbsp;&nbsp;&nbsp;**WHERE FUNCIONARIO.Cpf = DEPENDENTE.Fcpf** )<br><br>SELECT Pnome, Unome<br>FROM FUNCIONARIO<br>WHERE NOT EXISTS (<br>&nbsp;&nbsp;&nbsp;&nbsp;**SELECT 1**<br>&nbsp;&nbsp;&nbsp;&nbsp;**FROM DEPENDENTE**<br>&nbsp;&nbsp;&nbsp;&nbsp;**WHERE FUNCIONARIO.Cpf = DEPENDENTE.Fcpf** )|
 
+<br>Implementação da claúsula EXISTS
+<br>SELECT Pnome, Unome
+FROM FUNCIONARIO
+WHERE 0 < (
+    SELECT count(*)
+    FROM DEPENDENTE
+    WHERE FUNCIONARIO.Cpf = DEPENDENTE.Fcpf ) <br>
+
 ### Exemplo 07: EXISTS e Operadores '<' e '>'
 #### Qual o nome e salário dos funcionários que "não têm o maior salário na empresa"?
 
