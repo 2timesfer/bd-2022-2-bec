@@ -21,6 +21,10 @@ Um classificação comum para subconsultas é:
     - a subconsulta é avaliada uma vez para cada _tupla_ (ou combinação de _tuplas_) na consulta externa.
   - a subconsulta requer dados oriundos da consulta externa para ser processada.
 
+### Null em Union, Intersect e Except
+
+Valores NULL em consultas e subconsultas que utilizam união, insercção e exceção, eles irão aparecer dentro das tuplas retornadas. Não são realizadas as comparações com NULL estudadas no tópico 20, onde NULL = NULL retorna false, fazendo com que ele simplesmente esteja lá. Faz sentido? Não muito, lembra teoria dos conjuntos pura onde todo conjunto contém o subconjunto vazio/nulo.
+
 ### Cláusula IN
 
 A Cláusula **IN** é similar à operação de conjuntos "se pertence":<br>
