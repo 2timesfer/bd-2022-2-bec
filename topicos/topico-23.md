@@ -112,7 +112,7 @@ WHERE 0 < (
 
 |Classificação|SQL|
 |-|-|
-|Subconsulta correlata|SELECT Pnome, Unome, Salario<br>FROM FUNCIONARIO AS EXTERNA<br>WHERE 3 < (<br>&nbsp;&nbsp;&nbsp;&nbsp;**SELECT COUNT(DISTINCT Salario)**<br>&nbsp;&nbsp;&nbsp;&nbsp;**FROM FUNCIONARIO AS INTERNA**<br>&nbsp;&nbsp;&nbsp;&nbsp;**WHERE INTERNA.Salario > EXTERNA.Salario** )|
+|Subconsulta correlata|SELECT Pnome, Unome, Salario<br>FROM FUNCIONARIO AS EXTERNA<br>WHERE 1 >= (<br>&nbsp;&nbsp;&nbsp;&nbsp;**SELECT COUNT(DISTINCT Salario)**<br>&nbsp;&nbsp;&nbsp;&nbsp;**FROM FUNCIONARIO AS INTERNA**<br>&nbsp;&nbsp;&nbsp;&nbsp;**WHERE INTERNA.Salario < EXTERNA.Salario** )|
 
 ### Exercícios
 
